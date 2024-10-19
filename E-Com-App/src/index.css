@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css */
+html {
+    --bg-color-light: #ffffff;
+  --bg-color-dark: #1a202c;
+  --text-color-light: #000000;
+  --text-color-dark: #ffffff;
+    transition: background-color 0.3s;
+    font-family:"poppins";
+  }
+  body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;  }
+    .dark body {
+        background-color: var(--bg-color-dark);
+        color: var(--text-color-dark);
+      } 
