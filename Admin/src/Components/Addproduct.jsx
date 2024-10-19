@@ -32,7 +32,7 @@ const AddProduct = () => {
     formdata.append('product', image); 
 
     try {
-        const response = await fetch("http://localhost:4000/upload", {
+        const response = await fetch("https://stylemart-ecom-backend.onrender.com/upload", {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -45,7 +45,7 @@ const AddProduct = () => {
         if (responsedata.success) {
             product.image = responsedata.image_url; 
 
-            await fetch ('http://localhost:4000/api/addproduct',{
+            await fetch ('https://stylemart-ecom-backend.onrender.com/api/addproduct',{
                 method:'POST',
                 headers:{
                     Accept:'application/json',

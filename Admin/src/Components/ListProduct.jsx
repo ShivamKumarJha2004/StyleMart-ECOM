@@ -6,7 +6,7 @@ const ListProduct = () => {
   const navigate = useNavigate(); // Hook to navigate between routes
 
   const fetchData = async () => {
-    await fetch('http://localhost:4000/api/allproduct')
+    await fetch('https://stylemart-ecom-backend.onrender.com/api/allproduct')
       .then((res) => res.json())
       .then((data) => setAllProducts(data))
       .catch((error) => console.error('Error fetching products:', error));
@@ -20,7 +20,7 @@ const ListProduct = () => {
     const isConfirmed = window.confirm('Are you sure you want to delete this product?');
     
     if (isConfirmed) {
-      await fetch('http://localhost:4000/api/deleteproduct', {
+      await fetch('https://stylemart-ecom-backend.onrender.com/api/deleteproduct', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
